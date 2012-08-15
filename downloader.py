@@ -5,8 +5,6 @@
 
 import sys, re, requests
 
-
-
 import browser_objects
 import dom_builder
 
@@ -50,8 +48,6 @@ class Browser(object):
         #cdata_opened = Downloader.__re_script_start.sub(Downloader.__re_script_start_cdata, html)
         #cdata_closed = Downloader.__re_script_end.sub(Downloader.__re_script_end_cdata, cdata_opened)
         return dom_builder.HTMLtoDOM(html)
-
-    def 
 
     def __genHTML(self, dom):
         return dom.toprettyxml(indent = "  ")

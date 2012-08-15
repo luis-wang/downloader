@@ -5,6 +5,7 @@
 
 import re
 import PyV8
+from xml.dom
 
 from urlparse import urlparse
 from datetime import datetime
@@ -74,7 +75,7 @@ class Screen(BrowserObject):
         pixelDepth = 24
         width = 1024
 
-class Document(BrowserObject, xml.dom.minidom.Document):
+class Document(BrowserObject, DOMDocument):
     def __init__(self, browser):
         super(Document, self).__init__(browser)
         self.anchors = [a for a in browser.dom.getElementsByTagName('a') if a.hasAttribute('name') and a.getAttribute('name')]
